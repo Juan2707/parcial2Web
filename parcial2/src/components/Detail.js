@@ -3,7 +3,7 @@ export default function Detail() {
  const params = useParams();
  return (
    <div>
-     <h1>I am {params.objectId}</h1>
+     <h1>I am {params.bandaId}</h1>
    </div>
  );
 }

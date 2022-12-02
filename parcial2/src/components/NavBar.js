@@ -6,7 +6,7 @@ function NavBar() {
    <>
      <Navbar bg="dark" variant="dark">
        <Container>
-         <Navbar.Brand href="/objects">Adóptame</Navbar.Brand>
+         <Navbar.Brand href="/bandas">Bandas musicales</Navbar.Brand>
        </Container>
      </Navbar>
    </>
