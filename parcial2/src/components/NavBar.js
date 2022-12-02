@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 function NavBar() {
  return (
    <>
-     <Navbar bg="dark" variant="dark">
+     <Navbar bg="primary" variant="dark">
        <Container>
          <Navbar.Brand href="/bandas">Bandas musicales</Navbar.Brand>
        </Container>

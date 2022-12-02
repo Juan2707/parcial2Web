@@ -10,7 +10,8 @@ function Banda(props) {
             {props.banda.id}
             </th>
             <td>
-            {props.banda.name}
+            <p class="text-primary">{props.banda.name}</p>
+            
             </td>
             <td>
             {props.banda.country}
