@@ -1,4 +1,5 @@
 import Banda from "./banda";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -13,19 +14,19 @@ function Bandas() {
 
     const [bandas, setBandas] = useState([]);
 
-    const getOldest = () =>{
+    const getOldest = () => {
         let oldest = "2500";
         let name = ""
-        bandas.map((banda)=>{
-            if (banda.foundation_year<oldest){
-                oldest=banda.foundation_year
+        bandas.map((banda) => {
+            if (banda.foundation_year < oldest) {
+                oldest = banda.foundation_year
                 name = banda.name
             }
-            
+
         })
         oldest = parseInt(oldest)
-        oldest = 2022-oldest
-        return "La banda mas antigua es "+ name +" y fue fundada hace  "+ oldest + " años";
+        oldest = 2022 - oldest
+        return "La banda mas antigua es " + name + " y fue fundada hace  " + oldest + " años";
     }
 
     useEffect(() => {
@@ -39,31 +40,39 @@ function Bandas() {
     }, []);
 
     return (
-        <div>
-            <table className="table">
-                <thead className="thead-dark">
-                    <tr>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <table className="table">
+                        <thead className="thead-dark">
+                            <tr>
 
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Pais</th>
-                        <th scope="col">Genero</th>
-                        <th scope="col">Fundacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {console.log("Bandas", bandas)}
-                    {bandas.map((banda) => (
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Pais</th>
+                                <th scope="col">Genero</th>
+                                <th scope="col">Fundacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {console.log("Bandas", bandas)}
+                            {bandas.map((banda) => (
 
 
-                        <Banda key={banda.id} banda={banda} />
+                                <Banda key={banda.id} banda={banda} />
 
 
-                    ))}
-                </tbody>
-            </table>
-            
-            <h5>{getOldest()}</h5>
+                            ))}
+                        </tbody>
+                    </table>
+
+                    <h5>{getOldest()}</h5>
+                </div>
+                <div class = "col-4">
+
+                </div>
+            </div>
+
 
         </div>
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
 import App2 from './App2';
 import reportWebVitals from './reportWebVitals';
-import Post from './components/Post';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -14,20 +13,7 @@ import Bandas from './components/bandas';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const component = <h1>Hola mundo</h1>;
-root.render(
 
-  <App />
-
-);
-root.render(
-  <Container className="mt-3">
-   <Row>
-     <Post author="John Doe" content="This is the post content" likes={20} />
-     <Post author="Anne Hill" content="I like React" likes={3} />
-     <Post author="Laia Martins" content="I love JSX" likes={0} />
-   </Row>
- </Container>
- );
  root.render(
 
   <App2 />
